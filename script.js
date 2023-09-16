@@ -7,10 +7,7 @@ const btnEqual=document.getElementById("btn-equal")
 const btnOnOff=document.getElementById("btn-onoff")
 
 let theme=true
-btnDot.addEventListener("click",()=>{
-    currentInp=currentInp+"."
-    textField=currentInp
-})
+
 
 btnOnOff.addEventListener("click",()=>{
     if(btnOnOff.textContent==="OFF")
@@ -70,6 +67,18 @@ buttons.forEach((button)=>{
         }
     })
 });
+btnDot.addEventListener("click",()=>{
+    
+    if(textField.value==="")
+    {
+        currentInp=currentInp+"0.";
+        textField.value=currentInp;
+    }
+    else{
+        currentInp=currentInp+"."
+        textField.value=currentInp
+    }
+})
 btnEqual.addEventListener("click",()=>{
     if(textField.disabled===false)
     {
