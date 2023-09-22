@@ -9,7 +9,7 @@ const btnOnOff=document.getElementById("btn-onoff")
 let theme=true
 btnDot.addEventListener("click",()=>{
     currentInp=currentInp+"."
-    textField=currentInp
+    textField.value=currentInp
 })
 
 btnOnOff.addEventListener("click",()=>{
